@@ -33,33 +33,33 @@ const playRound = (playerSelection, computerSelection) => {
 
 // Función para jugar el juego completo de 5 rondas
 const game = () => {
-    let playerScore = 0;
-    let computerScore = 0;
+    let playerScore = 0
+    let computerScore = 0
 
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("Hi, choose your weapon: Rock, Paper, or Scissors");
-        const computerSelection = getComputerChoice("rock", "paper", "scissors");
+        const playerSelection = prompt("Hi, choose your weapon: Rock, Paper, or Scissors")
+        const computerSelection = getComputerChoice("rock", "paper", "scissors")
         const result = playRound(playerSelection, computerSelection);
 
-        console.log(result);
+        console.log(result)
 
         // Incrementar la puntuación según el resultado de la ronda
         if (result.includes("Win")) {
-            playerScore++;
+            playerScore++
         } else if (result.includes("Lose")) {
-            computerScore++;
+            computerScore++
         }
     }
 
     // Mostrar el ganador del juego basado en la puntuación
     if (playerScore > computerScore) {
-        console.log("You win the game!");
+        console.log("You win the game!")
     } else if (playerScore < computerScore) {
-        console.log("You lose the game!");
+        console.log("You lose the game!")
     } else {
-        console.log("It's a tie! No one wins.");
+        console.log("It's a tie! No one wins.")
     }
 }
 
 // Iniciar el juego
-game();
+game()
